@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, ScrollView } from 'react-native'
 import BannerComponents from '../Components/BannerComponents'
 import CatalogComponents from '../Components/CatalogComponents'
 import SongsComponents from '../Components/SongsComponent';
@@ -10,12 +10,13 @@ export default class Home extends Component {
     render() {
         return (
             <View style={styles.container}>
-            
+            <ScrollView>
             <BannerComponents navigation={this.props.navigation}/>
             <CatalogComponents navigation={this.props.navigation}/>
             
             <Text style={styles.title}>Songs</Text>
             <SongsComponents navigation={this.props.navigation}/>
+            </ScrollView>
         </View>
         )
     }
