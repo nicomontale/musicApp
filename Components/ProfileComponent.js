@@ -46,7 +46,8 @@ export default class ProfileComponent extends Component {
                {this.renderOption("music", "Songs", 20,200)}
                {this.renderOption("playlist-music", "Playlist", 20,190)}
                {this.renderOption("album", "Albums", 20,185)}
-          
+               {this.renderOption("download", "Downloads", 20,145)}
+               <View style={styles.divider}/>
             </View>
         )
     }

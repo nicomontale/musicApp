@@ -7,6 +7,10 @@ export default class CatalogComponents extends Component {
     constructor(props) {
         super(props)
     }
+
+    goToDetails = item => {
+        this.props.navigation.navigate('Details', {item, item});
+      };
     render() {
         let categories= [
             {
@@ -38,7 +42,7 @@ export default class CatalogComponents extends Component {
                 horizontal={true}
                 renderItem={({item,index})=>{
                     return(
-                        <TouchableWithoutFeedback>
+                        <TouchableWithoutFeedback onPress={() => this.goToDetails(item)}>
                    <Surface style={styles.surface}>
                    <ImageBackground source={item.img} style={styles.img}>
                    <Icon name="music" size={20} color="#fff"/>

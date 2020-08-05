@@ -1,13 +1,22 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import React, {Component} from 'react'
+import { StyleSheet, Text, View, ScrollView } from 'react-native'
 import ProfileComponent from '../Components/ProfileComponent'
-export default function Profile() {
+import SongsComponent from '../Components/SongsComponent'
+export default class Profile extends Component{
+    constructor(props) {
+        super(props);
+    }
+   render() {
     return (
         <View style={styles.container}>
-           
+            <ScrollView>
             <ProfileComponent/>
+            <Text style={styles.title}>History</Text>
+            <SongsComponent navigation={this.props.navigation}/>
+            </ScrollView>
         </View>
     )
+}
 }
 
 const styles = StyleSheet.create({
@@ -18,10 +27,10 @@ const styles = StyleSheet.create({
     },
     title: {
         
-        fontSize: 24, 
+        fontSize: 26, 
         fontWeight: 'bold',
         color: '#fff',
-        marginTop: 40,
+        marginTop: 20,
         margin:10,
         marginLeft:35,
       

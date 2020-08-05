@@ -3,7 +3,9 @@ import { Text, View, StyleSheet, Image, TouchableOpacity,
 StatusBar } from 'react-native'
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native'
-import Tabs from './config/router'
+import Tabs from './config/router';
+import Player from './Screens/Player';
+import CategoriesDetails from './Components/CategoriesDetails'
  class App extends Component {
 constructor(props) {
   super(props);
@@ -45,7 +47,19 @@ function Stacks() {
    name="Tabs"
    component={Tabs}
    options={{headerShown:false}}/>
+
+   <Stack.Screen
    
+   name="Player"
+   component={Player}
+   options={{headerShown:false}}/>
+   <Stack.Screen
+        name="Details"
+        component={CategoriesDetails}
+        options={{
+          headerShown: false,
+        }}
+      />
    </Stack.Navigator>
   )
 }

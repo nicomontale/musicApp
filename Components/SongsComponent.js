@@ -12,6 +12,10 @@ export default class SongsComponent extends Component {
     separator=()=> {
     return <View style={{height: 15, backgroundColor: '#000'}}/>
 }
+
+playSong = item => {
+    this.props.navigation.navigate('Player', {item: item});
+  };
     render() {
         let songs= [
             {
@@ -59,7 +63,7 @@ export default class SongsComponent extends Component {
                 ItemSeparatorComponent={()=>this.separator()}
                 renderItem={({item, index})=>{
                     return (
-                       <TouchableWithoutFeedback style={styles.songContainer}>
+                       <TouchableWithoutFeedback style={styles.songContainer} onPress={()=>this.playSong(item)}>
                        <View style={{flexDirection: 'row'}}>
                        <Image source={item.img}
                        style={styles.img}/>
