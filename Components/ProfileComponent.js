@@ -1,9 +1,28 @@
 import React, { Component } from 'react'
 import { Text, StyleSheet, View,Image } from 'react-native'
 import {Surface} from 'react-native-paper'
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
+import Icon2 from 'react-native-vector-icons/Ionicons'
 export default class ProfileComponent extends Component {
     constructor(props) {
         super(props)
+    }
+    renderOption=(icon,name, count, size)=> {
+        return(
+            <View style={styles.option}>
+            <View style={styles.left}>
+            <Icon name={icon} size={35} color="#ff5b77"/>
+            <Text style={styles.title}>{name}</Text>
+            </View>
+            <View style={{marginLeft: size}}></View>
+            <View style={styles.left}>
+            <Text style={styles.title}>{count}</Text>
+            <Icon2 name="ios-arrow-forward" size={35} color="#ff5b77"/>
+            
+            </View>
+            
+            </View>
+        )
     }
     render() {
         return (
@@ -24,9 +43,9 @@ export default class ProfileComponent extends Component {
                </View>
                <View style={styles.divider}/>
                
-               <View style={styles.option}>
-               
-               </View>
+               {this.renderOption("music", "Songs", 20,200)}
+               {this.renderOption("playlist-music", "Playlist", 20,190)}
+               {this.renderOption("album", "Albums", 20,185)}
           
             </View>
         )
@@ -78,9 +97,22 @@ const styles = StyleSheet.create({
         backgroundColor:'#ff5b77'
     },
     option: {
-        height: 50,
-        width: '100%',
+        marginTop: 10,
+        height: 60,
+        width: '200%',
         flexDirection: 'row',
-        alignItems: 'center'
+        alignItems: 'center',
+        padding: 10,
+        borderBottomWidth: 1,
+        borderBottomColor:'#ff5b77'
+    },
+    left: {
+     flexDirection: 'row',
+     
+    },
+    title: {
+        fontSize: 25,
+        marginLeft: 15,
+        color: '#fff'
     }
 })
