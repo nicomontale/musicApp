@@ -39,8 +39,8 @@ class PlayerComponent extends Component {
               <Image source={this.props.item.img} style={styles.img} />
             </Surface>
             <View style={styles.dataContainer}>
-              <Text style={styles.title}>{this.props.item.title}</Text>
-              <Text style={styles.subTitle}>{this.props.item.subTitle}</Text>
+              <Text  style={styles.title}>{this.props.item.name}</Text>
+              <Text style={styles.subTitle}>{this.props.item.subtitle}</Text>
               <TouchableOpacity style={styles.btn}>
                 <Icon name="play" size={30} color="#fff" />
               </TouchableOpacity>
@@ -104,9 +104,11 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 20,
     fontWeight: 'bold',
+    color: 'white' ,
+    
   },
   subTitle: {
-    color: '#fff',
+    color: 'grey',
   },
   btn: {
     height: 50,
