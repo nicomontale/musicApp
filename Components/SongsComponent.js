@@ -32,7 +32,7 @@ render() {
     return(
         <View>
         <Modal transparent={true} visible={this.state.modalVisible} animationType="slide" onRequestClose={()=> this.closeModal()}>
-        
+        <View style={{height: '100%', backgroundColor: 'rgba(0,0,0,0.4)'}}>
         <View style={styles.modal}>
         <TouchableOpacity style={styles.btnclose} onPress={()=> this.closeModal()} >
                     <Icon name="close" size={30} color="#fff" />
@@ -76,6 +76,7 @@ render() {
         
         </View>
         
+        </View>
         </View>
         
         </Modal>
