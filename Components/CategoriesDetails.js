@@ -44,6 +44,7 @@ const styles = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
     paddingTop: 20,
+    marginTop: 20
   },
   surface: {
     height: 220,

@@ -46,7 +46,7 @@ export default class CatalogComponents extends Component {
                    <Surface style={styles.surface}>
                    <ImageBackground source={item.img} style={styles.img}>
                    <Icon name="music" size={20} color="#fff"/>
-                   <Text style={styles.name}>{item.name}</Text>
+                
                    </ImageBackground>
                    </Surface>
                    </TouchableWithoutFeedback>

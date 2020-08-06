@@ -6,9 +6,10 @@ export default class Player extends Component {
         super(props)
     }
     render() {
+        let item = this.props.route.params.item;
         return (
             <View style={styles.container}>
-                <PlayerComponent navigation={this.props.navigation}/>
+                <PlayerComponent navigation={this.props.navigation} item={item} />
             </View>
         )
     }

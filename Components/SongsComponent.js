@@ -19,37 +19,38 @@ playSong = item => {
     render() {
         let songs= [
             {
-                name: 'Rain On Me',
-                subtitle: 'Lady Gaga',
-                img: require('../img/ladygaga.jpeg'),
-                duration: '3:15'
-        
-        
-            }, {
                 name: 'Peep Hole',
                 subtitle: 'DaBaby',
                 img: require('../img/dababy.jpg'),
-                duration: '3:15'
+                duration: '3.15'
         
-            }, {
+            },
+            {
+                name: 'Rain On Me',
+                subtitle: 'Lady Gaga',
+                img: require('../img/ladygaga.jpeg'),
+                duration: '3.15'
+        
+        
+            },  {
                 name: 'Burn',
                 subtitle: 'Usher',
                 img: require('../img/usher.jpg'),
-                duration: '3:15'
+                duration: '3.15'
         
             },
             {
                 name: 'After Hours',
                 subtitle: 'The Weeknd',
                 img: require('../img/ater.jpeg'),
-                duration: '3:15'
+                duration: '3.15'
         
         
             },{
                 name: 'Yummy',
                 subtitle: 'Justin Bieber',
                 img: require('../img/yummy.jpg'),
-                duration: '3:15'
+                duration: '3.15'
         
         
             },
